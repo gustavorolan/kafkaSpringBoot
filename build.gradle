@@ -27,7 +27,7 @@ dependencies {
 	testImplementation 'org.springframework.kafka:spring-kafka-test'
 }
 
-tasks.withType(KotlinCompile) {
+tasks.withType(KotlinCompile).configureEach {
 	kotlinOptions {
 		freeCompilerArgs = ['-Xjsr305=strict']
 		jvmTarget = '11'
